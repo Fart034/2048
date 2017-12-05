@@ -21,6 +21,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
 
 namespace _2048_UWP
 {
@@ -35,6 +37,7 @@ namespace _2048_UWP
         /// </summary>
         public App()
         {
+        AppCenter.Start("b78f3883-ccfb-4707-a5c8-c3463d351aaf", typeof(Analytics));
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
